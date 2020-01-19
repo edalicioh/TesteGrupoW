@@ -1,0 +1,161 @@
+#faq {
+    width: 100%;
+    height: 100vh;
+    margin-top: 5%;
+
+    .faq-title {
+        position: relative;
+        text-align: center;
+        h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 2em;
+            color: #282835;
+        }
+        p {
+            font-size: .9em;
+            color: #8B8B99;
+        }
+    }
+
+    .faq-container {
+        display: flex;
+        position: relative;
+        height: 100%;
+
+        .faq-itens {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            padding: 5% 10%;
+
+            .faq-iten {
+                position: relative;
+                width: 100%;
+                margin: 2% 0;
+                padding: .5rem 10% .5rem 15%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+
+                @media (max-width: 576px) {
+                    width: 75%;
+                    padding-right: 0;
+                }
+            
+                @media (max-width: 992px) and (min-width: 576px) {
+                    width: 75%;
+                    padding-right: 0;
+                }
+
+                i {
+                    position: absolute;
+                    left: 10px;
+                    top: 1.3rem;
+                    color: $bg-gra-head-primare;
+                }
+
+                h3 {
+                    margin: .5rem 0 .5rem 0;
+                    font-size: .8em;
+                    font-weight: 400;
+                    color: #8B8B99;
+                }
+
+                .faq-text {
+                    display: none;
+                    font-size: .7em;
+                    font-weight: 400;
+                    color: #8B8B99;
+                    
+                }
+
+                &:hover {
+                    background: linear-gradient(90deg, $bg-gra-head-primare, $bg-gra-head-secund);
+                    color: white;
+
+                    i {
+                        color: white;
+                    }
+                    h3 {
+                        color: white;
+                    }
+
+                    .faq-text {
+                        display: block;
+                        color: white;
+                    }
+                }
+            }
+            @media (max-width: 576px) {
+                width: auto;
+                align-items: center;
+                padding: 0;
+                margin-top: 10%;
+            }
+        
+            @media (max-width: 992px) and (min-width: 576px) {
+                width: auto;
+                align-items: center;
+                padding: 0;
+                margin-top: 10%;
+            }
+        }
+
+        .faq-mockup {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent url(/public/assets/img/faq-shape.svg) no-repeat right;
+            background-size: 90% 90%;
+            background-position-y: center;
+
+            @media (max-width: 576px) {
+                position: relative;
+                width: auto;
+            }
+        
+            @media (max-width: 992px) {
+                position: relative;
+                width: auto;
+            }
+
+            img {
+                transform: scale(0.7);
+                position: absolute;
+                @media (max-width: 576px) {
+                    position: relative;
+                    transform: scale(0.6);
+                }
+            
+                @media (max-width: 992px) and (min-width: 576px) {
+                    position: relative;
+                    transform: scale(0.6);
+                }
+            }
+
+        }
+        @media (max-width: 576px) {
+            flex-direction: column;
+            height: auto;
+        }
+    
+        @media (max-width: 992px) and (min-width: 576px) {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    @media (max-width: 576px) {
+        display: block;
+        height: auto;
+    }
+
+    @media (max-width: 992px) and (min-width: 576px) {
+        display: block;
+        height: auto;
+    }
+}
